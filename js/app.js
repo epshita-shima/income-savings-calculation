@@ -25,3 +25,27 @@ function getCostValue() {
         }
     }
 }
+// calculate balance after cost
+function calculateBalanceAfterCost() {
+    const incomeInput = costInput('income');
+    if (isNaN(incomeInput)) {
+        window.alert('please give valid input');
+    }
+    else {
+        if (incomeInput < getCostValue()) {
+            window.alert('your cost is so high');
+        }
+        else {
+            const mainBalance = parseFloat(incomeInput) - getCostValue();
+            console.log(mainBalance);
+            // set innerText in the balance
+            document.getElementById('balance').innerText = mainBalance;
+            return mainBalance;
+        }
+    }
+}
+// click calculation button for costing input and after balance
+function getCalculationExpenses() {
+    getCostValue();
+    calculateBalanceAfterCost();
+}
