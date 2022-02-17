@@ -71,3 +71,14 @@ function calculateSavingAmount() {
         }
     }
 }
+// calculate remaining balance
+function calculateRemainingBalance() {
+    const remainingBalance = calculateBalanceAfterCost() - calculateSavingAmount();
+    console.log(remainingBalance);
+    document.getElementById('remaining-balance').innerText = remainingBalance;
+}
+// call saving part function
+function savingAmount() {
+    calculateSavingAmount();
+    calculateRemainingBalance();
+}
