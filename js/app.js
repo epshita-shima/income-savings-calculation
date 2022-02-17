@@ -49,3 +49,25 @@ function getCalculationExpenses() {
     getCostValue();
     calculateBalanceAfterCost();
 }
+// calculate saving amount 
+function calculateSavingAmount() {
+    const incomeInput = costInput('income')
+    const savingAmount = costInput('saving');
+    const savingAmountText = parseFloat(savingAmount);
+    const saveMoney = (savingAmountText / 100) * incomeInput;
+    if (isNaN(savingAmount)) {
+        window.alert('Please give valid input');
+    }
+    else {
+        if (saveMoney > calculateBalanceAfterCost()) {
+            window.alert('your balance not enough for saving');
+        }
+        else if (saveMoney < 0) {
+            window.alert("please inter valid input");
+        }
+        else {
+            document.getElementById('saving-money').innerText = saveMoney;
+            return saveMoney;
+        }
+    }
+}
