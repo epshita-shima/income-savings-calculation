@@ -6,3 +6,23 @@ body{
     color: rgb(28, 90, 90);
     font-size: 40px;
 }
+.form-bg{
+    background: rgb(240, 236, 236);
+}
+.form-heading{
+    font-size: 24px;
+    font-weight: 600;
+}
+input::placeholder {
+    color: black;
+  }
+.input-title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 15px;
+}
+.amount-calculation input{
+    border: none;
+    text-align: center;
+    width: 100px;
+}
